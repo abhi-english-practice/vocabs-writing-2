@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>IELTS Task 2 · Film-making · Chunk & Pattern Dossier</title>
+  <style>
+    :root{
+      --ink:#17202a;--muted:#68717b;--paper:#f4f0e7;--sheet:#fffdfa;--line:#d9d3c7;
+      --red:#a23a35;--red-soft:#f4dfdb;--blue:#215f78;--blue-soft:#dceef3;
+      --green:#356b57;--green-soft:#dfeee6;--gold:#9b6b18;--gold-soft:#f4ead0;
+      --violet:#67527d;--violet-soft:#ebe4f0;--charcoal:#252b31;--shadow:0 15px 44px rgba(42,36,27,.10);
+      --rail:238px;--radius:18px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;line-height:1.62}
+    button,input,textarea,select{font:inherit}
+    button{cursor:pointer}
+    a{color:inherit}
+    .topbar{position:sticky;top:0;z-index:40;height:64px;background:rgba(23,32,42,.97);color:#fff;display:flex;align-items:center;gap:16px;padding:0 22px;border-bottom:1px solid rgba(255,255,255,.13)}
+    .brand{display:flex;align-items:center;gap:11px;min-width:0}
+    .brand-mark{width:31px;height:31px;border:1px solid rgba(255,255,255,.48);display:grid;place-items:center;font:700 12px/1 Georgia,serif;letter-spacing:.08em}
+    .brand-copy{min-width:0}.brand-copy b{display:block;font-family:Georgia,"Times New Roman",serif;font-size:15px;letter-spacing:.025em}.brand-copy small{display:block;color:#bdc6cd;font-size:10px;letter-spacing:.15em;text-transform:uppercase;white-space:nowrap}
+    .top-actions{margin-left:auto;display:flex;gap:8px;align-items:center}
+    .top-btn{border:1px solid rgba(255,255,255,.24);background:transparent;color:#fff;border-radius:999px;padding:7px 11px;font-size:12px;font-weight:700}
+    .top-btn:hover,.top-btn.active{background:#fff;color:var(--ink)}
+    .layout{display:grid;grid-template-columns:var(--rail) minmax(0,1fr);min-height:calc(100vh - 64px)}
+    .rail{position:sticky;top:64px;height:calc(100vh - 64px);padding:25px 18px;background:#e9e4da;border-right:1px solid var(--line);overflow:auto}
+    .rail-kicker{font-size:10px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--red);margin:0 10px 12px}
+    .nav-btn{width:100%;display:grid;grid-template-columns:28px 1fr;gap:8px;align-items:center;border:0;background:transparent;color:#3e464e;text-align:left;padding:10px;border-radius:11px;margin:3px 0;font-size:13px;font-weight:700}
+    .nav-btn span:first-child{font:700 11px/1 Georgia,serif;color:#8f887d}
+    .nav-btn:hover,.nav-btn.active{background:var(--sheet);color:var(--red);box-shadow:0 5px 17px rgba(42,36,27,.06)}
+    .rail-note{margin:24px 8px 0;padding-top:18px;border-top:1px solid #cec7ba;color:#6d6a64;font-size:11px}
+    .rail-note b{display:block;color:var(--ink);margin-bottom:5px}
+    main{width:min(1180px,100%);padding:36px 44px 90px;margin:0 auto}
+    section{scroll-margin-top:88px;margin-bottom:42px}
+    .sheet{background:var(--sheet);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden}
+    .sheet-pad{padding:30px 34px}
+    .kicker{font-size:10px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--red)}
+    h1,h2,h3{font-family:Georgia,"Times New Roman",serif;line-height:1.18;margin:0;color:#1b252d}
+    h1{font-size:clamp(32px,5vw,55px);max-width:880px;letter-spacing:-.025em}
+    h2{font-size:29px;letter-spacing:-.015em}
+    h3{font-size:19px}
+    p{margin:0}
+    .lead{font:italic 19px/1.55 Georgia,"Times New Roman",serif;color:#3e484f;max-width:870px;margin-top:15px}
+    .brief-head{background:linear-gradient(135deg,#fffdfa 0%,#f4ede1 100%);padding:36px 38px 30px;border-bottom:1px solid var(--line)}
+    .brief-grid{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(280px,.8fr);gap:0}
+    .prompt{padding:30px 38px;border-right:1px solid var(--line)}
+    .prompt-label,.meta-label{font-size:10px;font-weight:800;letter-spacing:.15em;text-transform:uppercase;color:var(--muted)}
+    .prompt blockquote{font:700 21px/1.48 Georgia,"Times New Roman",serif;margin:10px 0 20px;padding-left:18px;border-left:4px solid var(--red)}
+    .task-tags{display:flex;flex-wrap:wrap;gap:8px}.tag{font-size:11px;font-weight:800;letter-spacing:.05em;text-transform:uppercase;border:1px solid var(--line);border-radius:999px;padding:6px 9px;background:#fff}
+    .verdict{padding:30px 32px;background:#1e2c35;color:#eef4f5}
+    .verdict .prompt-label{color:#a9bec8}.verdict h3{color:#fff;font-size:26px;margin:8px 0 12px}.verdict p{color:#c9d6dc;font-size:13px}
+    .verdict-line{height:7px;background:linear-gradient(90deg,#6ea596 0 74%,#d6b365 74%);border-radius:999px;margin:22px 0 8px}.verdict-scale{display:flex;justify-content:space-between;font-size:9px;text-transform:uppercase;letter-spacing:.12em;color:#a9bec8}
+    .student-strip{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:14px;padding:18px 38px;background:#f8f5ef;border-top:1px solid var(--line)}
+    .field label{display:block;font-size:9px;font-weight:800;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);margin-bottom:4px}.field input{width:100%;border:0;border-bottom:1px solid #a9a196;background:transparent;padding:4px 0;color:var(--ink);outline:none}.field input:focus{border-color:var(--red)}
+    .section-head{display:flex;align-items:end;justify-content:space-between;gap:18px;margin:0 0 16px}.section-head p{max-width:620px;color:var(--muted);font-size:13px}
+    .blueprint{display:grid;grid-template-columns:repeat(4,1fr);border-top:5px solid var(--charcoal)}
+    .bp{padding:23px 21px;min-height:258px;border-right:1px solid var(--line);background:var(--sheet)}.bp:last-child{border-right:0}.bp:nth-child(2){background:#f7fbf8}.bp:nth-child(3){background:#fffaf3}
+    .bp-num{font:700 42px/1 Georgia,serif;color:#d3cec5}.bp h3{margin:8px 0}.bp-role{font-size:10px;font-weight:800;letter-spacing:.13em;text-transform:uppercase;color:var(--red);margin-bottom:14px}.bp-flow{list-style:none;padding:0;margin:0}.bp-flow li{position:relative;padding:7px 0 7px 20px;border-top:1px dotted #d2ccc1;font-size:12px}.bp-flow li:before{content:"";position:absolute;left:2px;top:13px;width:7px;height:7px;border-radius:50%;background:var(--blue)}
+    .macro-note{display:grid;grid-template-columns:150px 1fr;gap:20px;padding:22px 25px;background:#242b31;color:#fff}.macro-note b{font:700 18px/1.3 Georgia,serif}.macro-note p{font-size:13px;color:#d1d7db}.macro-formula{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;color:#f1cf82}
+    .audit-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.audit{padding:17px;border:1px solid var(--line);background:var(--sheet);border-radius:14px}.audit small{display:block;font-weight:800;letter-spacing:.12em;color:var(--red);margin-bottom:7px}.audit b{font:700 17px/1.2 Georgia,serif;display:block;margin-bottom:6px}.audit p{font-size:12px;color:var(--muted)}
+    .toolbar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:0 0 15px}.tool-btn{border:1px solid var(--line);background:var(--sheet);border-radius:999px;padding:7px 11px;font-size:11px;font-weight:800;color:#414a51}.tool-btn:hover,.tool-btn.active{border-color:var(--red);color:var(--red);background:#fff7f4}.legend{margin-left:auto;display:flex;flex-wrap:wrap;gap:10px;font-size:10px;color:var(--muted)}.legend i{display:inline-block;width:9px;height:9px;border-radius:2px;margin-right:4px}
+    .essay-card{border:1px solid var(--line);background:var(--sheet);border-radius:16px;margin:0 0 13px;overflow:hidden;box-shadow:0 8px 24px rgba(41,36,28,.055)}
+    .sentence-top{display:grid;grid-template-columns:86px minmax(0,1fr);gap:0}.sentence-id{padding:19px 14px;background:#242b31;color:#fff;text-align:center}.sentence-id strong{font:700 28px/1 Georgia,serif;display:block}.sentence-id span{display:block;font-size:8px;letter-spacing:.12em;text-transform:uppercase;color:#bbc4ca;margin-top:7px}.sentence-main{padding:19px 22px 16px}.sentence-role{display:flex;justify-content:space-between;gap:14px;align-items:center;margin-bottom:9px}.sentence-role b{font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--red)}.sentence-role span{font-size:10px;color:var(--muted)}
+    .chunk-line{font:700 18px/1.62 Georgia,"Times New Roman",serif}.chunk{border:0;border-radius:5px;padding:1px 4px;margin:0 1px;color:var(--ink);transition:.2s;box-decoration-break:clone;-webkit-box-decoration-break:clone}.chunk:hover{filter:saturate(1.3);outline:2px solid rgba(0,0,0,.08)}.chunk.context{background:var(--violet-soft)}.chunk.claim{background:var(--red-soft)}.chunk.link{background:var(--gold-soft)}.chunk.support{background:var(--green-soft)}.chunk.result{background:var(--blue-soft)}
+    body.no-highlight .chunk{background:transparent!important;padding-left:1px;padding-right:1px}
+    .syntax{margin-top:10px;color:#59636b;font:12px/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}.syntax b{color:var(--ink)}
+    .source-line{display:none;margin-top:12px;padding:10px 12px;border-left:3px solid #d28b46;background:#fff8ec;font-size:12px;color:#605a51}.source-line strong{color:#8c4d16}.show-source .source-line{display:block}
+    details.chunk-drawer{border-top:1px solid var(--line);background:#fbf8f2}details.chunk-drawer>summary{list-style:none;padding:11px 22px 11px 108px;cursor:pointer;font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#59636b}details.chunk-drawer>summary::-webkit-details-marker{display:none}details.chunk-drawer>summary:before{content:"+";display:inline-grid;place-items:center;width:18px;height:18px;border:1px solid #aaa297;border-radius:50%;margin-right:8px}details[open].chunk-drawer>summary:before{content:"−"}
+    .chunk-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;padding:0 15px 16px 108px}.chunk-card{border:1px solid var(--line);border-radius:12px;background:#fff;padding:14px;transition:.2s}.chunk-card.flash{box-shadow:0 0 0 3px rgba(162,58,53,.22);transform:translateY(-2px)}.chunk-card .chunk-head{font:700 15px/1.3 Georgia,serif;margin-bottom:5px}.chip-kind{display:inline-block;font:800 8px/1 sans-serif;letter-spacing:.09em;text-transform:uppercase;border-radius:999px;padding:4px 6px;margin-bottom:8px;background:#eee9e0;color:#665f57}.chunk-vi{font-size:12px;color:#3f4850;margin-bottom:9px}.micro-label{font-size:8px;font-weight:900;letter-spacing:.13em;text-transform:uppercase;color:var(--red);margin:8px 0 3px}.chunk-card ul{margin:0;padding-left:16px;color:#5f6870;font-size:11px}.chunk-card li{margin:2px 0}.form{font:11px/1.5 ui-monospace,SFMono-Regular,Menlo,monospace;color:#274f62;background:#edf4f5;padding:6px 7px;border-radius:6px}.usage{font-size:10.5px;color:#70685f;border-top:1px dotted var(--line);padding-top:7px;margin-top:8px}.usage b{color:#8c4d16}
+    .notes{padding:0 15px 15px 108px}.notes textarea{width:100%;min-height:52px;resize:vertical;border:1px dashed #c7bfb2;border-radius:10px;background:#fffdfa;padding:9px 11px;font-size:12px;outline:none}.notes textarea:focus{border-style:solid;border-color:var(--blue)}
+    .editor-table-wrap{overflow:auto;border:1px solid var(--line);border-radius:15px;background:var(--sheet)}table{border-collapse:collapse;width:100%}.editor-table{min-width:850px}.editor-table th{position:sticky;top:64px;background:#242b31;color:#fff;text-align:left;padding:12px 13px;font-size:9px;letter-spacing:.12em;text-transform:uppercase}.editor-table td{padding:12px 13px;border-bottom:1px solid var(--line);vertical-align:top;font-size:12px}.editor-table tr:last-child td{border-bottom:0}.editor-table td:first-child{font:700 15px Georgia,serif;color:var(--red);white-space:nowrap}.bad{background:#f7dfdc;text-decoration:line-through;text-decoration-thickness:1px;padding:2px 3px;border-radius:3px}.good{background:#dfeee6;padding:2px 3px;border-radius:3px}.editor-table .why{color:var(--muted)}
+    .pattern-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:13px}.pattern-card{border:1px solid var(--line);border-radius:15px;background:var(--sheet);overflow:hidden}.pattern-head{display:grid;grid-template-columns:44px 1fr auto;align-items:center;gap:10px;padding:14px 15px;border-bottom:1px solid var(--line)}.pattern-num{font:700 24px Georgia,serif;color:#c7bfb3}.pattern-card h3{font-size:16px}.copy-btn{border:1px solid var(--line);background:#fff;border-radius:8px;padding:5px 8px;font-size:9px;font-weight:800;color:#59636b}.copy-btn.done{color:var(--green);border-color:var(--green)}.pattern-body{padding:15px}.slot-pattern{font:700 14px/1.6 ui-monospace,SFMono-Regular,Menlo,monospace;color:#243d49}.slot{background:var(--gold-soft);color:#7a520e;border-radius:4px;padding:1px 3px}.pattern-vi{font-size:11px;color:var(--muted);margin:8px 0}.transfer{font-size:12px;padding:9px 11px;background:#f5f7f6;border-left:3px solid var(--green)}
+    .thesaurus-note{margin-top:15px;padding:18px 20px;border:1px solid #d9c89d;background:#fff9e8;border-radius:14px;font-size:12px;color:#685b39}.thesaurus-note b{color:#7a520e}
+    .drill-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.drill-card{border:1px solid var(--line);border-radius:14px;background:var(--sheet);padding:17px}.drill-no{font-size:9px;font-weight:900;letter-spacing:.13em;text-transform:uppercase;color:var(--red)}.drill-q{font:700 16px/1.45 Georgia,serif;margin:7px 0 11px}.drill-hint{font-size:11px;color:var(--muted)}.answer-btn{margin-top:12px;border:1px solid var(--line);background:#fff;border-radius:9px;padding:7px 9px;font-size:10px;font-weight:800}.model{display:none;margin-top:10px;padding:10px 11px;border-left:3px solid var(--blue);background:var(--blue-soft);font-size:12px}.model.show{display:block}.model b{color:var(--blue)}
+    .study-route{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:15px}.route{position:relative;border:1px solid var(--line);background:var(--sheet);border-radius:14px;padding:18px 17px 16px}.route input{position:absolute;right:14px;top:15px;width:18px;height:18px;accent-color:var(--green)}.route b{font:700 17px Georgia,serif;display:block;margin-bottom:6px}.route p{font-size:11px;color:var(--muted)}
+    .footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:20px;color:#716a61;font-size:10px;text-transform:uppercase;letter-spacing:.1em}
+    .mobile-nav{display:none}
+    @media(max-width:900px){:root{--rail:0px}.layout{display:block}.rail{display:none}main{padding:25px 18px 70px}.topbar{padding:0 14px}.brand-copy small{display:none}.top-btn .wide{display:none}.mobile-nav{display:flex;position:sticky;top:64px;z-index:30;overflow:auto;gap:6px;background:#e9e4da;border-bottom:1px solid var(--line);padding:8px 12px}.mobile-nav button{white-space:nowrap;border:1px solid var(--line);background:var(--sheet);border-radius:999px;padding:6px 10px;font-size:10px;font-weight:800}.brief-grid,.blueprint,.audit-grid{grid-template-columns:1fr 1fr}.prompt{border-right:0;border-bottom:1px solid var(--line)}.verdict{grid-column:2}.blueprint .bp:nth-child(2){border-right:0}.bp{border-bottom:1px solid var(--line)}.chunk-grid{grid-template-columns:1fr 1fr}.pattern-grid,.drill-grid{grid-template-columns:1fr}.student-strip{grid-template-columns:1fr}.study-route{grid-template-columns:1fr}}
+    @media(max-width:620px){h1{font-size:35px}.brief-head,.prompt,.verdict,.sheet-pad{padding:24px 20px}.brief-grid,.blueprint,.audit-grid{grid-template-columns:1fr}.verdict{grid-column:auto}.bp{border-right:0;min-height:auto}.macro-note{grid-template-columns:1fr}.sentence-top{grid-template-columns:60px 1fr}.sentence-id{padding:17px 7px}.sentence-main{padding:17px 14px}.chunk-line{font-size:16px}.chunk-grid{grid-template-columns:1fr;padding-left:15px}.notes{padding-left:15px}details.chunk-drawer>summary{padding-left:74px}.legend{width:100%;margin-left:0}.top-actions .secondary{display:none}.study-route{grid-template-columns:1fr}.footer{display:block}.footer span{display:block;margin:5px 0}}
+    @page{size:A4;margin:13mm}
+    @media print{body{background:#fff;font-size:10pt}.topbar,.rail,.mobile-nav,.toolbar,.copy-btn,.answer-btn{display:none!important}.layout{display:block}main{width:100%;padding:0}.sheet,.essay-card,.pattern-card,.drill-card{box-shadow:none;break-inside:avoid}.brief-head{padding:20px}.chunk-drawer{display:block!important}.chunk-drawer>summary{display:none}.chunk-drawer:not([open])>.chunk-grid{display:grid}.chunk-grid{padding-left:15px}.notes{display:none}.editor-table th{position:static}.section-head{margin-top:14px}.footer{margin-top:15px}.blueprint{grid-template-columns:repeat(4,1fr)}.bp{min-height:220px}.no-print{display:none!important}}
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><div class="brand-mark">W2</div><div class="brand-copy"><b>Writing Analysis Dossier</b><small>Film-making · chunks · patterns · lexical expansion</small></div></div>
+    <div class="top-actions">
+      <button class="top-btn secondary" id="sourceToggle" type="button"><span class="wide">Hiện </span>bản gốc</button>
+      <button class="top-btn secondary" id="highlightToggle" type="button"><span class="wide">Tắt </span>highlight</button>
+      <button class="top-btn" id="printBtn" type="button">Xuất PDF</button>
+    </div>
+  </header>
+
+  <div class="mobile-nav" id="mobileNav"></div>
+  <div class="layout">
+    <aside class="rail">
+      <p class="rail-kicker">Dossier index</p>
+      <nav id="sideNav"></nav>
+      <div class="rail-note"><b>Cách đọc màu</b>Tím = bối cảnh · Đỏ = lập trường · Vàng = nối logic · Xanh lá = phát triển · Xanh lam = kết quả.</div>
+    </aside>
+
+    <main>
+      <section id="brief" data-label="Đề & lập trường" data-no="01">
+        <div class="sheet">
+          <div class="brief-head">
+            <div class="kicker">IELTS Writing Task 2 · Positive / Negative Development</div>
+            <h1>Film-making:<br>Chunk & Pattern Dossier</h1>
+            <p class="lead">Phân rã bài viết thành “khối tư duy” có thể tái sử dụng — từ bố cục, chức năng câu đến collocations và lựa chọn diễn đạt tương đương.</p>
+          </div>
+          <div class="brief-grid">
+            <div class="prompt">
+              <div class="prompt-label">Đề bài chuẩn</div>
+              <blockquote>Films were produced by big companies in the past, but today people are able to make a film. Is this a negative or positive development?</blockquote>
+              <div class="task-tags"><span class="tag">One-sided judgement</span><span class="tag">Mostly positive</span><span class="tag">Concession allowed</span><span class="tag">4 paragraphs</span></div>
+            </div>
+            <div class="verdict">
+              <div class="prompt-label">Thesis compass</div>
+              <h3>Positive on balance,<br>with safeguards.</h3>
+              <p>Trọng tâm vẫn là lợi ích; đoạn rủi ro đóng vai trò nhượng bộ có kiểm soát, không biến bài thành “discuss both views”.</p>
+              <div class="verdict-line"></div><div class="verdict-scale"><span>Core benefits</span><span>Necessary caution</span></div>
+            </div>
+          </div>
+          <div class="student-strip">
+            <div class="field"><label>Họ và tên</label><input data-save="student" aria-label="Họ và tên"></div>
+            <div class="field"><label>Ngày học</label><input data-save="date" aria-label="Ngày học"></div>
+            <div class="field"><label>Target band</label><input data-save="band" value="7.0+" aria-label="Target band"></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="blueprint" data-label="Bản đồ bố cục" data-no="02">
+        <div class="section-head"><div><div class="kicker">Macro architecture</div><h2>Bản đồ 4 đoạn</h2></div><p>Luồng lập luận được đọc theo chức năng, không đọc như 11 câu rời. Mỗi đoạn phải hoàn thành một nhiệm vụ rõ ràng.</p></div>
+        <div class="sheet">
+          <div class="blueprint">
+            <article class="bp"><div class="bp-num">P1</div><h3>Introduction</h3><div class="bp-role">Context → qualified thesis</div><ul class="bp-flow"><li>Paraphrase xu hướng</li><li>Nêu lập trường “mostly positive”</li><li>Hé mở nhu cầu thận trọng</li></ul></article>
+            <article class="bp"><div class="bp-num">P2</div><h3>Benefits</h3><div class="bp-role">Access → memory → talent</div><ul class="bp-flow"><li>Giảm rào cản sản xuất</li><li>Lưu giữ trải nghiệm đời thường</li><li>Ươm mầm tài năng</li><li>Làm mờ ranh giới nghiệp dư/chuyên nghiệp</li></ul></article>
+            <article class="bp"><div class="bp-num">P3</div><h3>Risks</h3><div class="bp-role">Control → privacy → harm</div><ul class="bp-flow"><li>Pivot: không thể thả nổi</li><li>Xâm phạm đời tư</li><li>Nội dung quay lén/phát tán</li><li>Mini-judgement: không hoàn toàn tích cực</li></ul></article>
+            <article class="bp"><div class="bp-num">P4</div><h3>Conclusion</h3><div class="bp-role">Restate → regulate</div><ul class="bp-flow"><li>Khẳng định lợi ích tổng thể</li><li>Giữ nguyên mức độ lập trường</li><li>Đề xuất giới hạn hợp lý</li></ul></article>
+          </div>
+          <div class="macro-note"><b>Công thức lập luận</b><p><span class="macro-formula">CLEAR POSITION + DOMINANT BENEFIT PARAGRAPH + CONTROLLED CONCESSION + CONSISTENT RESTATEMENT</span><br>Không đếm số ý “2 lợi / 2 hại”; hãy làm rõ bên nào quyết định phán đoán cuối cùng.</p></div>
+        </div>
+      </section>
+
+      <section id="audit" data-label="Chẩn đoán band" data-no="03">
+        <div class="section-head"><div><div class="kicker">Examiner lens</div><h2>Chẩn đoán bài nguồn</h2></div><p>Đây là chẩn đoán phục vụ học tập, không phải điểm chấm chính thức.</p></div>
+        <div class="audit-grid">
+          <article class="audit"><small>TR · Task Response</small><b>Lập trường rõ</b><p>“Mostly positive” nhất quán, có nhượng bộ. Cần làm lợi ích nổi trội hơn bằng giải thích sâu thay vì liệt kê.</p></article>
+          <article class="audit"><small>CC · Coherence</small><b>Khung logic tốt</b><p>Trình tự benefits → risks → conclusion hợp lý. Một số câu chuyển ý còn cơ học; quan hệ nhân quả cần chính xác hơn.</p></article>
+          <article class="audit"><small>LR · Lexical Resource</small><b>Có tham vọng từ vựng</b><p>Ý tưởng “prosumers”, “blur the distinction” đáng học; nhưng có kết hợp từ sai như “brewing ground”, “destroy publicity”.</p></article>
+          <article class="audit"><small>GRA · Grammar</small><b>Cần biên tập trước khi học</b><p>Lỗi song song, hòa hợp, bị động và danh từ không đếm được xuất hiện nhiều. Dùng bản sửa chuẩn ở Sentence Lab.</p></article>
+        </div>
+      </section>
+
+      <section id="sentence-lab" data-label="Sentence Lab" data-no="04">
+        <div class="section-head"><div><div class="kicker">Micro architecture</div><h2>11 câu · 33 chunks</h2></div><p>Nhấn vào một cụm được tô màu để mở đúng thẻ phân tích. “Thesaurus” ở đây là nhóm lựa chọn gần nghĩa theo ngữ cảnh, không phải từ thay thế máy móc.</p></div>
+        <div class="toolbar">
+          <button class="tool-btn" id="openAll" type="button">Mở toàn bộ collocations</button>
+          <button class="tool-btn" id="closeAll" type="button">Thu gọn</button>
+          <div class="legend"><span><i style="background:var(--violet-soft)"></i>Bối cảnh</span><span><i style="background:var(--red-soft)"></i>Lập trường</span><span><i style="background:var(--gold-soft)"></i>Nối logic</span><span><i style="background:var(--green-soft)"></i>Phát triển</span><span><i style="background:var(--blue-soft)"></i>Kết quả</span></div>
+        </div>
+        <div id="sentenceList"></div>
+      </section>
+
+      <section id="editor" data-label="Bàn biên tập" data-no="05">
+        <div class="section-head"><div><div class="kicker">Accuracy before memorisation</div><h2>Không học nhầm lỗi của bản gốc</h2></div><p>Giữ ý tưởng tốt, nhưng thay các cấu trúc thiếu tự nhiên hoặc sai ngữ pháp bằng phiên bản có thể dùng trong phòng thi.</p></div>
+        <div class="editor-table-wrap">
+          <table class="editor-table"><thead><tr><th>Câu</th><th>Bản gốc cần chú ý</th><th>Bản sửa nên học</th><th>Lý do</th></tr></thead><tbody id="editorRows"></tbody></table>
+        </div>
+      </section>
+
+      <section id="phrasebank" data-label="Pattern Bank" data-no="06">
+        <div class="section-head"><div><div class="kicker">Transferable language</div><h2>Pattern Bank đa chủ đề</h2></div><p>Giữ “xương câu”, thay nội dung trong ô màu vàng. Mỗi mẫu có một câu chuyển chủ đề để tránh học thuộc riêng đề phim ảnh.</p></div>
+        <div class="pattern-grid" id="patternGrid"></div>
+        <div class="thesaurus-note"><b>Nguyên tắc thesaurus:</b> “lead to”, “contribute to” và “be associated with” không cùng mức độ nhân quả; “ban”, “restrict” và “regulate” cũng khác cường độ. Chỉ thay cụm khi quan hệ logic và mức độ khẳng định vẫn đúng.</div>
+      </section>
+
+      <section id="transfer" data-label="Transfer Drill" data-no="07">
+        <div class="section-head"><div><div class="kicker">Active recall</div><h2>Drill chuyển giao pattern</h2></div><p>Tự viết trước, sau đó mới mở câu mẫu. Câu mẫu là một phương án, không phải đáp án duy nhất.</p></div>
+        <div class="drill-grid" id="drillGrid"></div>
+        <div class="study-route">
+          <label class="route"><input type="checkbox" data-check="route1"><b>Pass 1 · Trace</b><p>Đọc chỉ phần Blueprint và nói lại logic 4 đoạn trong 30 giây.</p></label>
+          <label class="route"><input type="checkbox" data-check="route2"><b>Pass 2 · Mine</b><p>Chọn 8 chunks phù hợp văn phong của bạn; viết một câu mới cho mỗi cụm.</p></label>
+          <label class="route"><input type="checkbox" data-check="route3"><b>Pass 3 · Transfer</b><p>Viết lại cùng bố cục cho đề AI, mạng xã hội hoặc giáo dục trực tuyến.</p></label>
+        </div>
+      </section>
+
+      <footer class="footer"><span>IELTS Writing Task 2 · Teaching dossier</span><span>Correctness → chunks → transfer</span></footer>
+    </main>
+  </div>
+
+  <script>
+    const kindLabel={context:'Bối cảnh',claim:'Lập trường',link:'Nối logic',support:'Phát triển',result:'Kết quả'};
+    const sentences=[
+      {id:1,p:'P1 · Introduction',role:'Paraphrase the trend',original:'The increasing popularity of camera equipment and film-making learning materials has led to the rise of amateur films and the like.',syntax:'[CAUSE NP] + has led to + [RESULT NP].',logic:'Đưa xu hướng vào bài bằng quan hệ nguyên nhân → kết quả.',parts:[
+        {t:'The increasing availability of affordable camera equipment and filmmaking resources',k:'context',vi:'khả năng tiếp cận thiết bị giá hợp lý và tài liệu làm phim ngày càng tăng',form:'the increasing availability of + noun',alts:['the growing accessibility of digital tools','wider access to recording technology','the proliferation of filmmaking resources'],coll:['affordable camera equipment','filmmaking resources','widely available technology'],note:'“Availability” nhấn mạnh sự sẵn có; “popularity” nhấn mạnh mức độ được ưa chuộng.'},
+        {t:'has led to',k:'link',vi:'đã dẫn đến',form:'A has led to + noun / V-ing',alts:['has resulted in','has given rise to','has contributed to'],coll:['lead to a rise in','result in wider participation','contribute to rapid growth'],note:'“Contribute to” yếu hơn “lead to”: chỉ là một phần nguyên nhân.'},
+        {t:'a rise in amateur film production.',k:'result',vi:'sự gia tăng hoạt động sản xuất phim nghiệp dư',form:'a rise / increase / surge in + noun',alts:['the growth of independent filmmaking','an expansion in user-generated video','a surge in amateur productions'],coll:['amateur film production','independent content creation','user-generated films'],note:'“Film production” chính xác và học thuật hơn “films and the like”.'}]},
+      {id:2,p:'P1 · Introduction',role:'State a qualified position',original:'I find this trend mostly positive, though this is still room for some caution.',syntax:'[POSITION], although + [QUALIFICATION].',logic:'Chốt hướng trả lời nhưng giới hạn mức độ bằng một mệnh đề nhượng bộ.',parts:[
+        {t:'I consider this trend largely positive,',k:'claim',vi:'tôi cho rằng xu hướng này nhìn chung là tích cực',form:'consider + object + adjective',alts:['I regard this as a broadly beneficial development','this is positive on balance','the advantages are more substantial overall'],coll:['largely positive','broadly beneficial','positive on balance'],note:'“Largely/mostly” cho phép thừa nhận nhược điểm mà không làm mờ lập trường.'},
+        {t:'although',k:'link',vi:'mặc dù',form:'main clause, although + clause',alts:['even though','while it is true that','notwithstanding these benefits'],coll:['although concerns remain','while risks exist','despite its clear benefits'],note:'“Although” đi với mệnh đề; “despite” đi với danh từ hoặc V-ing.'},
+        {t:'there remains a need for caution.',k:'context',vi:'vẫn cần có sự thận trọng',form:'there remains a need for + noun',alts:['the trend warrants some caution','certain safeguards are still necessary','it should be approached with care'],coll:['exercise caution','warrant caution','a cautious approach'],note:'Không dùng “this is room”; cấu trúc đúng là “there is/remains room for…”.'}]},
+      {id:3,p:'P2 · Benefits',role:'Topic sentence: wider access',original:'The introduction of home movie making means that many more people can enjoy a variety of cheap, fast-produced movies, and even creating movies for themselves and their friends.',syntax:'[DEVELOPMENT] + enables + [PEOPLE] + to V1 and (even) V2.',logic:'Lợi ích 1: dân chủ hóa khả năng thưởng thức và sản xuất nội dung.',parts:[
+        {t:'The spread of home filmmaking',k:'context',vi:'sự phổ biến của hoạt động làm phim tại nhà',form:'the spread / expansion / democratisation of + noun',alts:['the democratisation of filmmaking','wider participation in content creation','the expansion of home-based production'],coll:['home filmmaking','independent production','accessible creative tools'],note:'“Democratisation” phù hợp khi muốn nhấn mạnh việc giảm rào cản tiếp cận.'},
+        {t:'enables far more people to enjoy a wide variety of inexpensive, quickly produced films',k:'support',vi:'cho phép nhiều người hơn tiếp cận nhiều phim rẻ và được sản xuất nhanh',form:'enable + object + to-infinitive',alts:['allows a much wider audience to access','makes diverse content available to ordinary viewers','brings low-cost production within reach'],coll:['a wide variety of content','inexpensive productions','reach a wider audience'],note:'Giữ song song sau “enable”: to enjoy … and (to) create …'},
+        {t:'and even create their own content for friends and family.',k:'result',vi:'và thậm chí tự tạo nội dung cho bạn bè, gia đình',form:'and even + bare infinitive (parallel to earlier to-V)',alts:['produce films of their own','turn personal ideas into videos','share self-produced content'],coll:['create original content','produce a film independently','share content with an audience'],note:'Không viết “can enjoy … and even creating”; hai động từ phải song song.'}]},
+      {id:4,p:'P2 · Benefits',role:'Explain personal value',original:'Most home movies serve as the commemorative records of family gatherings, life-changing memories, and field trips of individuals - such mundane topics will rarely be covered by a mainstream film.',syntax:'X serves as Y — [RELATIVE/APPOSITIVE EXPLANATION].',logic:'Lợi ích 2: lưu trữ ký ức mà phim thương mại thường bỏ qua.',parts:[
+        {t:'Most home movies serve as commemorative records of',k:'support',vi:'phần lớn phim gia đình đóng vai trò như tư liệu lưu niệm về',form:'serve as + role / record / reminder of',alts:['provide a visual record of','document meaningful moments in','preserve memories of'],coll:['commemorative record','visual archive','preserve personal memories'],note:'Không cần “the” trước danh từ số nhiều mang nghĩa khái quát.'},
+        {t:'family gatherings, life-changing events and personal trips—',k:'context',vi:'những buổi sum họp, sự kiện thay đổi cuộc đời và chuyến đi cá nhân',form:'three-item list with parallel noun phrases',alts:['milestone occasions and everyday experiences','family celebrations and formative moments','private events and personal journeys'],coll:['family gathering','life-changing event','personal milestone'],note:'Liệt kê cùng loại ngữ pháp giúp câu cân đối và dễ đọc.'},
+        {t:'everyday subjects that are rarely covered by mainstream cinema.',k:'result',vi:'những chủ đề đời thường hiếm khi được điện ảnh chính thống khai thác',form:'noun + that + passive clause',alts:['topics overlooked by commercial studios','experiences underrepresented in mainstream media','stories rarely portrayed on the big screen'],coll:['mainstream cinema','commercial film industry','overlook an everyday subject'],note:'“Mundane” có thể mang sắc thái tẻ nhạt; “everyday” trung tính hơn.'}]},
+      {id:5,p:'P2 · Benefits',role:'Develop the talent pipeline',original:'Amateur film-making groups are also the brewing ground for amateur talents to rise and find themselves a job in a more serious environment.',syntax:'X provides a breeding ground in which Y can V1 and V2.',logic:'Lợi ích 3: cộng đồng nghiệp dư trở thành nơi đào tạo và kết nối nghề nghiệp.',parts:[
+        {t:'Amateur filmmaking groups also provide a breeding ground',k:'support',vi:'các nhóm làm phim nghiệp dư cũng tạo môi trường ươm mầm',form:'provide / create / serve as a breeding ground for',alts:['serve as an incubator for talent','create a supportive environment for novices','provide a platform for emerging filmmakers'],coll:['a breeding ground for talent','a creative community','a supportive learning environment'],note:'Cụm cố định là “breeding ground”, không phải “brewing ground”.'},
+        {t:'in which emerging talent can develop',k:'link',vi:'nơi tài năng mới có thể phát triển',form:'place + in which + subject + verb',alts:['where beginners can hone their craft','through which novices gain practical experience','in which aspiring filmmakers refine their skills'],coll:['emerging talent','hone one’s craft','gain hands-on experience'],note:'“Talent” thường là danh từ không đếm được khi chỉ năng lực/con người tài năng nói chung.'},
+        {t:'and eventually secure work in the professional film industry.',k:'result',vi:'và sau cùng tìm được việc trong ngành phim chuyên nghiệp',form:'eventually + verb + work/employment in',alts:['gain a foothold in the industry','move into professional filmmaking','pursue a viable creative career'],coll:['secure employment','enter the film industry','build a professional career'],note:'“Secure work” trang trọng và tự nhiên hơn “find themselves a job”.'}]},
+      {id:6,p:'P2 · Benefits',role:'Extend with a trend/example',original:'The late 20st century marks the appearance of prosumers - hobbyists who are willing to pay a lot of money for professional cameras and video editing softwares; their film production blurs the distinction between amateur home-making versus professional movies.',syntax:'Since + TIME, [APPOSITIVE SUBJECT] + has + PAST PARTICIPLE + between A and B.',logic:'Đưa khái niệm “prosumer” để nâng tầm lập luận và kết đoạn lợi ích.',parts:[
+        {t:'Since the late twentieth century, the rise of “prosumers”—hobbyists willing to invest in professional cameras and video-editing software—',k:'context',vi:'từ cuối thế kỷ XX, sự xuất hiện của “prosumer” — người vừa tiêu dùng vừa sản xuất',form:'since + point in time, present perfect',alts:['the emergence of producer-consumers','the growing class of serious hobbyists','the advent of well-equipped amateurs'],coll:['invest in equipment','professional-grade camera','video-editing software'],note:'“Software” không đếm được; viết “twentieth/20th”, không viết “20st”.'},
+        {t:'has blurred',k:'link',vi:'đã làm mờ',form:'has blurred / eroded / narrowed + object',alts:['has eroded','has narrowed','has made increasingly indistinct'],coll:['blur a distinction','erode a boundary','narrow the divide'],note:'Hiện tại hoàn thành nối sự thay đổi trong quá khứ với kết quả hiện nay.'},
+        {t:'the distinction between amateur and professional filmmaking.',k:'result',vi:'ranh giới giữa làm phim nghiệp dư và chuyên nghiệp',form:'the distinction between A and B',alts:['the boundary separating amateurs from professionals','the divide between independent and studio production','traditional professional–amateur boundaries'],coll:['draw a distinction between','blur the line between','bridge the gap between'],note:'Dùng “between A and B”, không trộn với “versus”.'}]},
+      {id:7,p:'P3 · Risks',role:'Pivot to the concession',original:'Still, the development of home-made movies should not be left unchecked.',syntax:'Nevertheless, [TREND] should not be left + COMPLEMENT.',logic:'Báo hiệu chuyển đoạn: thừa nhận rủi ro nhưng không đảo lập trường toàn bài.',parts:[
+        {t:'Nevertheless,',k:'link',vi:'tuy vậy',form:'sentence adverb + comma',alts:['Even so,','That said,','Despite these advantages,'],coll:['nevertheless, concerns remain','that said, safeguards are needed','despite these benefits'],note:'“Still” dùng được; “Nevertheless” tạo chuyển đoạn học thuật rõ hơn.'},
+        {t:'the growth of independently produced films',k:'context',vi:'sự phát triển của phim do cá nhân/nhóm độc lập sản xuất',form:'the growth / expansion of + noun phrase',alts:['the rise of amateur content','the expansion of self-produced media','widespread citizen filmmaking'],coll:['independent production','self-produced content','amateur filmmaking'],note:'“Independently produced” chính xác hơn “home-made” khi nội dung không nhất thiết làm tại nhà.'},
+        {t:'should not be left entirely unchecked.',k:'claim',vi:'không nên hoàn toàn bị thả nổi',form:'modal + passive + complement',alts:['requires appropriate oversight','should be subject to safeguards','cannot remain wholly unregulated'],coll:['leave a trend unchecked','impose reasonable safeguards','ensure effective oversight'],note:'“Entirely” giữ sắc thái cân bằng: không kêu gọi kiểm soát tuyệt đối.'}]},
+      {id:8,p:'P3 · Risks',role:'Explain the privacy risk',original:'When everyone can own a camera and produce a short film, it is inevitably results in the rise of paparazzi, which invades the privacy of many people, both celebrities and common ones.',syntax:'As + CHANGE, [RISK] can become + COMPARATIVE, allowing + OBJECT + to V.',logic:'Nối khả năng tiếp cận thiết bị với nguy cơ quay phim xâm phạm riêng tư.',parts:[
+        {t:'As cameras become accessible to almost everyone,',k:'context',vi:'khi máy quay trở nên dễ tiếp cận với hầu hết mọi người',form:'as + gradual change, main clause',alts:['with near-universal access to cameras','as recording devices become ubiquitous','given the widespread availability of smartphones'],coll:['widespread access to','ubiquitous recording devices','accessible technology'],note:'“As” phù hợp với thay đổi diễn ra đồng thời; tránh khẳng định mọi người đều thật sự sở hữu máy quay.'},
+        {t:'intrusive filming can become more common,',k:'claim',vi:'việc quay phim xâm phạm có thể trở nên phổ biến hơn',form:'subject + can become + comparative adjective',alts:['covert recording may proliferate','privacy-invasive content can spread','unauthorised filming may increase'],coll:['intrusive filming','covert recording','record without consent'],note:'Dùng “can/may” để tránh quan hệ nhân quả tuyệt đối và thiếu chứng minh.'},
+        {t:'allowing self-appointed paparazzi to invade the privacy of celebrities and ordinary people alike.',k:'result',vi:'tạo điều kiện cho người săn tin tự phát xâm phạm đời tư của cả người nổi tiếng lẫn người bình thường',form:'result clause: allowing + object + to-infinitive',alts:['facilitating serious invasions of privacy','exposing public figures and private citizens to surveillance','compromising the privacy of people from all walks of life'],coll:['invade someone’s privacy','intrude on private life','celebrities and ordinary people alike'],note:'“Paparazzi” là danh từ số nhiều; “ordinary people” tự nhiên hơn “common ones”.'}]},
+      {id:9,p:'P3 · Risks',role:'Add a serious harmful outcome',original:'Another problematic aspect of home-making movies is amateur pornography and voyeuristic videos; they have the potential to destroy a person’s publicity when disseminated on the internet, especially under the form of revenge porn.',syntax:'Another concern is X, which can + HARM + when + PAST PARTICIPLE.',logic:'Mở rộng rủi ro từ đời tư sang tổn hại danh tiếng do phát tán nội dung.',parts:[
+        {t:'Another serious concern is the production of explicit or voyeuristic material,',k:'claim',vi:'một lo ngại nghiêm trọng khác là việc sản xuất nội dung khiêu dâm hoặc quay lén',form:'another concern is + noun / V-ing',alts:['a further drawback lies in the creation of harmful material','another troubling consequence is non-consensual content','a more serious risk concerns voyeuristic recordings'],coll:['explicit material','voyeuristic content','non-consensual recording'],note:'Dùng danh từ “production/creation” để nói đúng vấn đề là hoạt động sản xuất và phát tán.'},
+        {t:'which can severely damage a victim’s reputation when disseminated online,',k:'result',vi:'có thể gây tổn hại nghiêm trọng danh tiếng nạn nhân khi bị phát tán trực tuyến',form:'which can + adverb + verb + object + when + V3',alts:['cause lasting reputational harm when circulated online','ruin a victim’s public image if widely shared','have devastating consequences when distributed without consent'],coll:['damage a reputation','cause reputational harm','disseminate content online'],note:'“Publicity” = sự chú ý/quảng bá; “reputation” mới là danh tiếng có thể bị tổn hại.'},
+        {t:'particularly in the form of revenge pornography.',k:'context',vi:'đặc biệt dưới hình thức nội dung trả thù tình dục',form:'particularly / especially in the form of + noun',alts:['especially when shared as revenge content','most notably in cases of image-based abuse','particularly where intimate material is shared without consent'],coll:['in the form of','image-based abuse','share without consent'],note:'Cụm chuẩn là “in the form of”, không phải “under the form of”.'}]},
+      {id:10,p:'P3 · Risks',role:'Mini-conclusion for the paragraph',original:'Such issues display that amateur films are not always a good thing.',syntax:'These concerns demonstrate that + QUALIFIED JUDGEMENT.',logic:'Khép đoạn rủi ro và nối ngược về thesis “largely positive, not wholly positive”.',parts:[
+        {t:'Taken together,',k:'link',vi:'xét tổng thể các ý vừa nêu',form:'taken together, + clause',alts:['collectively,','in combination,','viewed as a whole,'],coll:['taken together, these factors','considered collectively','viewed in combination'],note:'Dùng để tổng hợp các dẫn chứng trong cùng đoạn, không phải mở ý mới.'},
+        {t:'these concerns demonstrate that',k:'support',vi:'những lo ngại này cho thấy rằng',form:'evidence/concerns demonstrate that + clause',alts:['these risks illustrate that','such problems make it clear that','these examples show why'],coll:['demonstrate a need for','illustrate the danger of','highlight a limitation'],note:'“Display that” không tự nhiên trong nghĩa “chứng minh rằng”.'},
+        {t:'the democratisation of filmmaking is not an unqualified good.',k:'claim',vi:'việc dân chủ hóa làm phim không phải điều tốt tuyệt đối',form:'X is not an unqualified good',alts:['is not entirely beneficial','is not positive in every respect','brings benefits but also genuine costs'],coll:['an unqualified good','a mixed blessing','carry genuine risks'],note:'“Unqualified good” là cách cô đọng để nói một điều không tốt trong mọi khía cạnh.'}]},
+      {id:11,p:'P4 · Conclusion',role:'Restate judgement + implication',original:'To conclude, I still believe amateur films greatly improve our lives; however, there needs to be some restriction on which movies are allowed to distribute.',syntax:'On balance, I believe X; however, [PROPORTIONATE RESPONSE] is needed.',logic:'Lặp đúng lập trường mở bài và thêm hệ quả chính sách ở mức vừa phải.',parts:[
+        {t:'On balance, I still believe that amateur filmmaking can substantially enrich our lives;',k:'claim',vi:'sau khi cân nhắc, tôi vẫn tin làm phim nghiệp dư có thể làm cuộc sống phong phú đáng kể',form:'on balance, I believe that + clause',alts:['all things considered, the trend is beneficial overall','weighing these factors, its merits remain greater','overall, independent filmmaking makes a positive contribution'],coll:['on balance','substantially enrich','make a positive contribution'],note:'“Can” giữ mức độ hợp lý; conclusion không thêm một lợi ích hoàn toàn mới.'},
+        {t:'however,',k:'link',vi:'tuy nhiên',form:'independent clause; however, independent clause',alts:['nevertheless,','even so,','at the same time,'],coll:['however, safeguards are needed','nevertheless, oversight remains necessary','even so, risks must be addressed'],note:'Với hai mệnh đề độc lập, dùng dấu chấm phẩy trước “however”.'},
+        {t:'reasonable restrictions are needed on content that may be legally distributed.',k:'result',vi:'cần có hạn chế hợp lý đối với nội dung được phép phân phối hợp pháp',form:'restrictions are needed on + noun + relative clause',alts:['proportionate regulation should govern public distribution','clear safeguards should restrict harmful material','distribution standards are necessary for high-risk content'],coll:['reasonable restrictions','proportionate regulation','content distribution standards'],note:'Nội dung “is allowed to be distributed”; người làm phim “is allowed to distribute content”.'}]}
+    ];
+
+    const issues=[
+      ['S1','amateur films and the like','amateur film production','“And the like” mơ hồ; dùng danh từ chỉ đúng xu hướng.'],
+      ['S2','this is still room','there remains a need / there is still room','Cấu trúc tồn tại phải dùng “there”, không dùng “this”.'],
+      ['S3','can enjoy … and even creating','can enjoy … and even create','Hai động từ sau “can” phải song song.'],
+      ['S4','the commemorative records','commemorative records','Bỏ mạo từ khi nói khái quát về vai trò.'],
+      ['S5','brewing ground / amateur talents','breeding ground / emerging talent','Sai collocation; “talent” thường không đếm được trong nghĩa này.'],
+      ['S6','20st / softwares','20th / software','Sai số thứ tự; “software” là danh từ không đếm được.'],
+      ['S6','between amateur … versus professional','between amateur and professional','Không trộn hai cấu trúc “between A and B” và “A versus B”.'],
+      ['S8','it is inevitably results','this inevitably results / can result','Thừa “is”; nên hedge bằng “can” nếu quan hệ nhân quả chưa tuyệt đối.'],
+      ['S8','paparazzi, which invades / common ones','paparazzi, who invade / ordinary people','Hòa hợp số nhiều, đại từ chỉ người và lựa chọn từ tự nhiên.'],
+      ['S9','destroy a person’s publicity','damage a victim’s reputation','“Publicity” không mang nghĩa danh tiếng cần bảo vệ.'],
+      ['S9','under the form of','in the form of','Collocation cố định là “in the form of”.'],
+      ['S10','issues display that / a good thing','concerns demonstrate that / an unqualified good','Nâng độ chính xác và văn phong học thuật.'],
+      ['S11','some restriction','reasonable restrictions','Danh từ đếm được cần số nhiều hoặc mạo từ.'],
+      ['S11','movies are allowed to distribute','content may be distributed','Phim là đối tượng được phân phối, nên cần bị động.']
+    ];
+
+    const patterns=[
+      {title:'Cause → trend',code:'The increasing availability of [X] has led to a rise in [Y].',vi:'Sự sẵn có ngày càng tăng của X đã dẫn tới sự gia tăng Y.',ex:'The increasing availability of online courses has led to a rise in flexible learning.'},
+      {title:'Qualified stance',code:'I consider [X] largely positive, although [Y] remains a concern.',vi:'Tôi đánh giá X nhìn chung tích cực, dù Y vẫn đáng lo.',ex:'I consider remote work largely positive, although social isolation remains a concern.'},
+      {title:'Wider access',code:'The spread of [X] enables far more people to [V].',vi:'Sự phổ biến của X cho phép nhiều người hơn làm V.',ex:'The spread of mobile banking enables far more people to access financial services.'},
+      {title:'Preserve what is overlooked',code:'[X] serves as a record of [Y]—subjects rarely covered by [Z].',vi:'X đóng vai trò tư liệu về Y — nội dung hiếm khi Z khai thác.',ex:'Citizen journalism serves as a record of local events—stories rarely covered by national media.'},
+      {title:'Talent incubator',code:'[X] provides a breeding ground in which [Y] can develop.',vi:'X tạo môi trường ươm mầm nơi Y có thể phát triển.',ex:'Open-source communities provide a breeding ground in which young programmers can develop.'},
+      {title:'Blur a boundary',code:'[X] has blurred the distinction between [A] and [B].',vi:'X đã làm mờ ranh giới giữa A và B.',ex:'Artificial intelligence has blurred the distinction between human-made and machine-generated content.'},
+      {title:'Controlled warning',code:'Nevertheless, the growth of [X] should not be left entirely unchecked.',vi:'Tuy vậy, sự phát triển của X không nên hoàn toàn bị thả nổi.',ex:'Nevertheless, the growth of facial-recognition systems should not be left entirely unchecked.'},
+      {title:'Access → risk',code:'As [X] becomes widely accessible, [Y] can become more common.',vi:'Khi X trở nên phổ biến, Y có thể xuất hiện thường xuyên hơn.',ex:'As generative tools become widely accessible, convincing misinformation can become more common.'},
+      {title:'Conditional harm',code:'[X] can severely damage [Y] when [CONDITION].',vi:'X có thể gây tổn hại nghiêm trọng Y khi có điều kiện Z.',ex:'Personal data can severely damage an individual’s security when leaked online.'},
+      {title:'Synthesis',code:'Taken together, these concerns demonstrate that [X] is not an unqualified good.',vi:'Xét tổng thể, các lo ngại cho thấy X không phải điều tốt tuyệt đối.',ex:'Taken together, these concerns demonstrate that unrestricted tourism is not an unqualified good.'},
+      {title:'Balanced conclusion',code:'On balance, I believe that [X]; however, [SAFEGUARD] is needed.',vi:'Sau khi cân nhắc, tôi tin X; tuy nhiên cần biện pháp Y.',ex:'On balance, I believe that data sharing benefits research; however, informed consent is needed.'},
+      {title:'Proportionate policy',code:'Reasonable restrictions are needed on [X] that may be [V3].',vi:'Cần hạn chế hợp lý đối với X có thể được V.',ex:'Reasonable restrictions are needed on advertising that may be shown to children.'}
+    ];
+
+    const drills=[
+      {q:'Viết thesis “mostly positive” cho xu hướng học trực tuyến, nhưng thừa nhận nguy cơ mất tương tác xã hội.',hint:'Dùng: largely positive + although … remains a concern',a:'I consider the expansion of online learning largely positive, although reduced social interaction remains a concern.'},
+      {q:'Viết câu cause → effect về smartphone và citizen journalism.',hint:'Dùng: increasing availability of … has led to …',a:'The increasing availability of smartphones has led to a rise in citizen journalism.'},
+      {q:'Viết câu nói mạng mã nguồn mở là nơi ươm mầm lập trình viên trẻ.',hint:'Dùng: provide a breeding ground in which …',a:'Open-source communities provide a breeding ground in which young programmers can hone their skills.'},
+      {q:'Viết câu về AI làm mờ ranh giới giữa nội dung do người và máy tạo.',hint:'Dùng đúng: between A and B',a:'Generative AI has blurred the distinction between human-made and machine-generated content.'},
+      {q:'Viết câu cảnh báo công nghệ nhận diện khuôn mặt không nên bị thả nổi.',hint:'Dùng bị động: should not be left …',a:'The expansion of facial-recognition technology should not be left entirely unchecked.'},
+      {q:'Viết câu risk có hedge: công cụ tạo sinh dễ tiếp cận → tin giả thuyết phục hơn.',hint:'Dùng: as … becomes accessible, … can …',a:'As generative tools become widely accessible, highly convincing misinformation can become more common.'},
+      {q:'Viết mini-conclusion: du lịch đại trà không phải điều tốt tuyệt đối.',hint:'Dùng: Taken together … unqualified good',a:'Taken together, these concerns demonstrate that mass tourism is not an unqualified good.'},
+      {q:'Viết conclusion cân bằng cho chia sẻ dữ liệu y tế: lợi cho nghiên cứu nhưng cần đồng thuận.',hint:'Dùng dấu chấm phẩy trước however',a:'On balance, I believe that sharing medical data can substantially benefit research; however, informed consent and strong privacy safeguards are needed.'}
+    ];
+
+    const navSections=[...document.querySelectorAll('main section[data-label]')];
+    const side=document.getElementById('sideNav'),mobile=document.getElementById('mobileNav');
+    navSections.forEach((s,i)=>{
+      const b=document.createElement('button');b.type='button';b.className='nav-btn';b.dataset.target=s.id;b.innerHTML=`<span>${s.dataset.no}</span><span>${s.dataset.label}</span>`;side.appendChild(b);
+      const m=document.createElement('button');m.type='button';m.dataset.target=s.id;m.textContent=s.dataset.label;mobile.appendChild(m);
+    });
+    document.querySelectorAll('[data-target]').forEach(b=>b.addEventListener('click',()=>document.getElementById(b.dataset.target).scrollIntoView({behavior:'smooth'})));
+
+    function escapeHtml(s){return s.replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]))}
+    function sentenceMarkup(s){return s.parts.map((p,i)=>`<button type="button" class="chunk ${p.k}" data-jump="chunk-${s.id}-${i}">${escapeHtml(p.t)}</button>`).join(' ')}
+    function chunkCard(c,sid,i){return `<article class="chunk-card" id="chunk-${sid}-${i}"><span class="chip-kind">${kindLabel[c.k]}</span><div class="chunk-head">${escapeHtml(c.t)}</div><p class="chunk-vi">${escapeHtml(c.vi)}</p><div class="micro-label">Pattern</div><div class="form">${escapeHtml(c.form)}</div><div class="micro-label">Thesaurus mở rộng</div><ul>${c.alts.map(x=>`<li>${escapeHtml(x)}</li>`).join('')}</ul><div class="micro-label">Collocations vệ tinh</div><ul>${c.coll.map(x=>`<li>${escapeHtml(x)}</li>`).join('')}</ul><p class="usage"><b>Dùng chính xác:</b> ${escapeHtml(c.note)}</p></article>`}
+    document.getElementById('sentenceList').innerHTML=sentences.map(s=>`<article class="essay-card" id="sentence-${s.id}"><div class="sentence-top"><div class="sentence-id"><strong>${String(s.id).padStart(2,'0')}</strong><span>${s.p.split(' · ')[0]}</span></div><div class="sentence-main"><div class="sentence-role"><b>${escapeHtml(s.role)}</b><span>${escapeHtml(s.p)}</span></div><div class="chunk-line">${sentenceMarkup(s)}</div><div class="syntax"><b>Pattern:</b> ${escapeHtml(s.syntax)} · <b>Logic:</b> ${escapeHtml(s.logic)}</div><div class="source-line"><strong>Bản gốc:</strong> ${escapeHtml(s.original)}</div></div></div><details class="chunk-drawer"><summary>Phân tích 3 chunks · collocations · thesaurus</summary><div class="chunk-grid">${s.parts.map((c,i)=>chunkCard(c,s.id,i)).join('')}</div><div class="notes"><textarea data-save="note-${s.id}" aria-label="Ghi chú câu ${s.id}" placeholder="Ghi chú cá nhân cho câu ${s.id}…"></textarea></div></details></article>`).join('');
+
+    document.querySelectorAll('[data-jump]').forEach(btn=>btn.addEventListener('click',()=>{const card=document.getElementById(btn.dataset.jump);const details=card.closest('details');details.open=true;setTimeout(()=>{card.scrollIntoView({behavior:'smooth',block:'center'});card.classList.add('flash');setTimeout(()=>card.classList.remove('flash'),1200)},40)}));
+
+    document.getElementById('editorRows').innerHTML=issues.map(r=>`<tr><td>${r[0]}</td><td><span class="bad">${escapeHtml(r[1])}</span></td><td><span class="good">${escapeHtml(r[2])}</span></td><td class="why">${escapeHtml(r[3])}</td></tr>`).join('');
+    function slots(code){return escapeHtml(code).replace(/\[([^\]]+)\]/g,'<span class="slot">[$1]</span>')}
+    document.getElementById('patternGrid').innerHTML=patterns.map((p,i)=>`<article class="pattern-card"><div class="pattern-head"><span class="pattern-num">${String(i+1).padStart(2,'0')}</span><h3>${escapeHtml(p.title)}</h3><button type="button" class="copy-btn" data-copy="${i}">Copy</button></div><div class="pattern-body"><div class="slot-pattern">${slots(p.code)}</div><p class="pattern-vi">${escapeHtml(p.vi)}</p><div class="transfer"><b>Transfer:</b> ${escapeHtml(p.ex)}</div></div></article>`).join('');
+    document.querySelectorAll('[data-copy]').forEach(btn=>btn.addEventListener('click',async()=>{const text=patterns[+btn.dataset.copy].code;try{await navigator.clipboard.writeText(text);btn.textContent='Đã chép';btn.classList.add('done');setTimeout(()=>{btn.textContent='Copy';btn.classList.remove('done')},1400)}catch(e){btn.textContent='Chọn & chép'}}));
+
+    document.getElementById('drillGrid').innerHTML=drills.map((d,i)=>`<article class="drill-card"><div class="drill-no">Prompt ${String(i+1).padStart(2,'0')}</div><div class="drill-q">${escapeHtml(d.q)}</div><p class="drill-hint">${escapeHtml(d.hint)}</p><button type="button" class="answer-btn" data-answer="${i}">Mở câu mẫu</button><div class="model" id="answer-${i}"><b>Model:</b> ${escapeHtml(d.a)}</div></article>`).join('');
+    document.querySelectorAll('[data-answer]').forEach(btn=>btn.addEventListener('click',()=>{const box=document.getElementById('answer-'+btn.dataset.answer);box.classList.toggle('show');btn.textContent=box.classList.contains('show')?'Ẩn câu mẫu':'Mở câu mẫu'}));
+
+    const sourceToggle=document.getElementById('sourceToggle');sourceToggle.addEventListener('click',()=>{document.body.classList.toggle('show-source');const on=document.body.classList.contains('show-source');sourceToggle.classList.toggle('active',on);sourceToggle.innerHTML=on?'<span class="wide">Ẩn </span>bản gốc':'<span class="wide">Hiện </span>bản gốc'});
+    const highlightToggle=document.getElementById('highlightToggle');highlightToggle.addEventListener('click',()=>{document.body.classList.toggle('no-highlight');const on=document.body.classList.contains('no-highlight');highlightToggle.classList.toggle('active',on);highlightToggle.innerHTML=on?'<span class="wide">Bật </span>highlight':'<span class="wide">Tắt </span>highlight'});
+    document.getElementById('openAll').addEventListener('click',()=>document.querySelectorAll('.chunk-drawer').forEach(d=>d.open=true));
+    document.getElementById('closeAll').addEventListener('click',()=>document.querySelectorAll('.chunk-drawer').forEach(d=>d.open=false));
+    document.getElementById('printBtn').addEventListener('click',()=>window.print());
+
+    const memory={get(k){try{return localStorage.getItem(k)}catch(e){return null}},set(k,v){try{localStorage.setItem(k,v)}catch(e){}}};
+    document.querySelectorAll('[data-save]').forEach(el=>{const key='film-dossier-'+el.dataset.save;const saved=memory.get(key);if(saved!==null)el.value=saved;el.addEventListener('input',()=>memory.set(key,el.value))});
+    document.querySelectorAll('[data-check]').forEach(el=>{const key='film-dossier-'+el.dataset.check;el.checked=memory.get(key)==='1';el.addEventListener('change',()=>memory.set(key,el.checked?'1':'0'))});
+    if('IntersectionObserver' in window){const observer=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){document.querySelectorAll('.nav-btn').forEach(b=>b.classList.toggle('active',b.dataset.target===e.target.id))}})},{rootMargin:'-25% 0px -65% 0px'});navSections.forEach(s=>observer.observe(s))}
+    let printState=[];window.addEventListener('beforeprint',()=>{printState=[...document.querySelectorAll('.chunk-drawer')].map(d=>d.open);document.querySelectorAll('.chunk-drawer').forEach(d=>d.open=true)});window.addEventListener('afterprint',()=>document.querySelectorAll('.chunk-drawer').forEach((d,i)=>d.open=printState[i]));
+  </script>
+</body>
+</html>
